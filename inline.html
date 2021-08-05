@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.3-web/css/all.css">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=UWWKIEzOhe-f7amPP24GsE701vuBYLqV3EuaI9tlghVMQCbJ7tFYgYfIDVFJgu7JulKaszsQ6MO-nTbZfNiI3IIFV-A111sbJA_Ck6PZTQeO636vr4-AdvSKEfa1P4BNtrG-cij_RWvtV3O1aXiiKbdDKNyv13emqwmMNH98mREsOwOipjQQZAH_5c_p4AUHBcH5YDIA1lZP26hLUMBP8ZzijTAA18MpPMr5Fu-ZhPaiA70dnSOYT1ABUTqJ5mFym-oJtEk49oXMYg3cKdJj-9iHZISB3yW4NAeaMEEuoKeXYPXsJ6kEzWsu-j7exZdcAk96VQwx9deACgq_5PXrqthqK-Cb0o5xhJsVdpiUH67pHRNIlONFlsRsBvq3hm-j8APyjy6Lwr1xwGo-TZYEqr5aVIPXmipVodtN0S1fT9v8GY2dMK54awXB9bSVL5NX5XaIpYcRRjg3EWyHoocNRA" charset="UTF-8"></script>
+    <style>
+        body{
+            overflow-x:hidden
+        }
+        nav{
+            position: relative;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .container{
+            width: 100%;
+            max-width: 1160px;
+        }
+        .header{
+            position: fixed;
+            z-index: 1000;  
+            width: 100%;
+            height: 74.6px;
+            transition: .3s;
+        }
+        .header.sticky{
+            box-shadow: 1px .1px 1px rgb(126, 125, 125);
+            background-color: white;
+        }
+        .outerbox {
+            width: 1160px;
+            left: 50%;
+            
+        }
+        .nav{
+            width: 100%;
+            height: 74.6px;
+        }
+        
+        .logo{
+            width: 150px;
+            height: 60px;
+        }
+
+        .logo img{
+            width: 90%;
+        }
+        .nav-menu a{
+            margin-left: 30px;
+            font-weight:normal;
+            color: rgba(241, 236, 236, 0.829);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: .2s;
+        }
+        
+        .nav-menu a:hover{
+            color: white;
+        }
+
+        
+        .header.sticky a{
+            color: black;
+        }
+
+        .header.sticky a:hover{
+            color: orange;
+        }
+
+        .bar{
+            width: 50px;
+            height: 70px;
+            font-size: 30px;
+        }
+
+        .banner{
+            width: 100%;
+            height: 680px;
+            background: url('/hero_image.jpg') 50% 50% no-repeat;
+            background-size: cover;
+            margin-bottom: 40px;
+        }
+        .banner-logo {
+            width: 300px;
+        }
+        .banner-logo img{
+            width: 100%;
+        }
+
+        .intro-content{
+            width: 560px;
+            margin: 0;
+        }
+        .small-banner{
+            width: 100%;
+            height: 184px;
+            margin-bottom: 80px;
+        }
+        .small-banner img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .service-area{
+            margin-bottom: 80px;
+        }
+        .service-area-info{
+            width: 800px;
+        }
+        .service-area-info h3{
+            font-size: 25px;
+        }
+
+        .location{
+            width: 760px;
+            height: 93px;
+        }
+        .location img{
+            width: 100%;
+            height: 100%;
+        }
+        .blue-bg{
+            background-color: rgba(238, 244, 245, 0.658);
+        }
+        .tool-info{
+            width: 100%;
+        }
+
+        .tool-info span{
+            color: #ff6e06;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+        .tool-info h1{
+            margin-bottom: 80px;
+        }
+        .sample1{
+            position: relative;
+            width: 800px;
+            height: 550px;
+           
+        }
+        .sample1 img{
+            width: 100%;
+            position: absolute;
+            transform: translate(-300px, 140px)
+            
+        }
+        
+        .title{
+            font-size: 30px;
+            padding-top: 10px;
+        }
+
+        .title img{
+            width: 35px;
+            margin-left: 50px; 
+            margin-right: 10px;
+        }
+        
+        .sample2{
+            position: relative;
+            overflow:hidden ;
+            width: 850px;
+            height: 750px;
+            
+        }
+        .sample2 img{
+            position: absolute;
+            width: 100%;
+        }
+        .sample3{
+            width: 560px;
+            height: 698px;
+        }
+        .sample3 img{
+            width: 100%;
+        }
+        .Features-icon{
+            width: 44px;
+            height: 44px;
+        }
+
+        .Features-icon img{
+            width: 100%;
+            margin-top: 5px;
+        }
+        .sub-title{
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .content{
+            font-size: 17px;
+            width: 490px;
+        }
+        .partner-list{
+            padding-bottom: 30px;
+            border-bottom: .1px solid rgba(218, 213, 213, 0.521);
+        }
+        .partner-list a{
+            padding:30px;
+            color: black;
+            text-decoration: none;
+        }
+        .partner-list a:hover{
+            padding-bottom: 30px;
+            border-bottom: 5px solid orangered;
+        }
+
+        .partner-link{
+            width: 200px;
+            height: 150px;
+            margin: 0 auto;
+        }
+
+        
+
+        .partner-link img{
+            width: 100%;
+            transition: .5s;
+        }
+        
+        .partner-link img:hover {
+            transform: scale(1.2);
+        }
+
+        .deep-blue-bg{
+            background-color: rgba(11, 28, 71, 0.938);
+            
+        }
+
+        .banner-box{
+            margin: 50px auto;
+        }
+
+        .box-left {
+            height: 1000px;
+
+        }
+        .box-right{
+            height: 1000px;
+
+        }
+        .box-left h1{
+            color: white;
+            font-size: 32px;
+            line-height: 4rem;
+        }
+
+        .box-left p{
+            color: white;
+            font-style: italic;
+            margin-bottom: 80px;
+        }
+
+        .quote{
+            margin: 30px 0;
+        }
+        .hold-ipad{
+            width: 560px;
+            height: 560px;
+        }
+        .hold-ipad img{
+            width: 100%;
+           
+        }
+        .freetry-info{
+            margin: auto;
+            width: 500px;
+            height: 1000px;
+            background: rgb(248, 246, 246);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        .form-top {
+            width: 348px;
+        }
+        .form-top a{
+            color: #ff6e06;
+            text-decoration: none;
+        }
+        form{
+            margin-top: 40px;
+            width: 100%;
+        }
+        label{
+            display: block;
+            font-weight: bold;
+        }
+        input{
+            width: 100%;
+            height: 40px;
+            border: 0.3px solid rgb(233, 228, 228);
+        }
+        .group{
+            margin-bottom: 20px;
+        }
+
+        .btn{
+            color: white;
+            width: 200px;
+            height: 60px;
+            background-color: #ff6e06;
+            border: none;
+            border-radius: 30px;
+            transition: .2s;
+            line-height: 50px;
+        }
+        .btn:hover{
+            color: white;
+            background-color: #ff6e06a9;
+        }
+
+        .what-more{
+            height: 200px;
+            background:linear-gradient(#ff6e06a9,#f13e08a9) ;
+            color: white;
+        }
+        .what-more h1{
+            line-height: 200px;
+        }
+
+        .what-more a {
+            text-decoration: none;
+        }
+        .what-more a:hover {
+            text-decoration: none;
+            color: white;
+        }
+        .contact-us{
+            margin: 20px auto;
+        }
+
+        
+        .phone-icon{
+            width: 48px;
+            height: 48px;
+            margin: 20px;
+        }
+        .phone-icon img{
+            width: 100%;
+        }
+
+        .phone a{
+            color: black;
+            font-size: 28px;
+            transition: .2s;
+        }
+        .phone a:hover{
+            color:#ff6e06a9 ;
+            text-decoration: none;
+        }
+
+        .mail-icon{
+            width: 48px;
+            height: 48px;
+            margin: 20px;
+        }
+        .mail-icon img{
+            width: 100%;
+        }
+
+        .dark-blue-bg{
+            background-color: rgb(42, 42, 55);
+        }
+        .footer{
+            color: white;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            font-size: 14px;
+        }
+        .footer-logo{
+            width: 150px;
+            margin: 10px 0px;
+        }
+        .footer-logo img{
+            width: 70%;
+        }
+        .sitmap-wrap a{
+            color: rgb(255, 255, 255);
+            display: block;
+            padding: 15px 0;
+            border-bottom: .5px solid rgb(117, 115, 115);
+            transition: .2s;
+        }
+
+        .sitmap-wrap a:hover{
+            color: #ff6e06;
+            text-decoration: none;
+        }
+        
+        .ig{
+            width: 230px;
+            padding: 0 10px;
+        }
+
+        .ig-photo{
+            width: 66px;
+            height: 66px;
+        }
+        .ig-photo img{
+            width: 100%;
+        }
+
+        .black-bg{
+            background-color: rgb(28, 27, 29);
+        }
+
+        .footer-bottom{
+            /* height: 80px; */
+            color: rgb(155, 149, 149);
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
+        .footer-left a {
+            color: rgb(155, 149, 149);
+            text-decoration: none;
+        }
+        .footer-left a:hover {
+            color: #ff6e06;
+        }
+        .social-media-link a{
+            color: rgb(155, 149, 149);
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .social-media-link a:hover{
+            color: #ff6e06;
+            transition: .3s;
+        }
+        
+        .fb-link-page{
+            width: 100%;
+        }
+
+        .fb-link-page img{
+            width: 100%;
+        }
+        /* 距離屬性 */
+        .mb40{
+            margin-bottom: 40px;
+        }
+        .white-spacer120{
+            width: 100%;
+            height: 120px;
+        }
+        .white-spacer60{
+            width: 100%;
+            height: 60px;
+        }
+        .white-spacer40{
+            width: 100%;
+            height: 40px;
+        }
+        
+        
+
+    /* --------------手機以iphone8 plus的414為寬度------------------- */
+        @media (max-width:420px) {
+        
+        .container{
+            width: 350px;
+        }
+        .header{
+            position: static;
+            z-index: 1000;  
+            width: 100%;
+            height: 74.6px;
+            padding: 0px;
+            transition: .3s;
+        }
+        .outerbox {
+            background-color: hsl(0, 0%, 99%);
+            clear: both;
+            width: 100%;
+            left: 50%;
+            
+        }
+        .nav{
+            width: 100%;
+            height: 74.6px;
+        }
+        .logo{
+            margin: 20px 30px;
+            width: 120px;
+            height: 60px;
+        }
+        .logo img{
+            width: 80%;
+        }
+        .banner{
+            width: 100%;
+            height: 340px;
+            background: url('/hero_image.jpg') 50% 50% no-repeat;
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+
+        .banner-box{
+            width: 340px;
+        }
+
+        .banner-box img{
+            width: 100%;
+            height: 100%;
+        }
+        .banner-logo{
+            width: 120px;
+            margin: 0 auto;
+        }
+        .banner-logo img{
+            width: 100%;
+        }
+
+        .intro-title{
+            font-size: 28px;
+            margin: 0px;
+        }
+        .intro-content{
+            width: 340px;
+            font-size: 14px;
+            margin: 0;
+        }
+        .small-banner{
+            width: 100%;
+            height: 61px;
+            margin-bottom: 40px;
+        }
+        .small-banner img{
+            width: 100%;
+            height: 100%;
+        }
+        .service-area{
+            margin-bottom: 40px;
+        }
+        .service-area-info{
+            width: 800px;
+            /* height: 357px; */
+        }
+        .service-area-info h3{
+            font-size: 18px;
+        }
+        .location{
+            width: 760px;
+            height: 42px;
+        }
+        .location img{
+            width: 100%;
+            height: 100%;
+        }
+        .blue-bg{
+            background-color: rgba(211, 238, 241, 0.658);
+        }
+        .tool-info{
+            width: 100%;
+        }
+
+        .tool-info span{
+            color: #ff6e06;
+            /* font-weight: bold; */
+            font-size: 16px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        .tool-info h1{
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .sample1{
+            width: 320px;
+            height: 200px;
+        }
+        .sample1 img{
+            width: 100%;
+            height: 100%;
+            transform: translate(0px, -20px);
+        }
+        .title{
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .title img{
+            width: 35px;
+            margin-right: 10px;
+        }
+        
+        .sample2{
+            width: 350px;
+            height: 300px;
+            transform: translate(-30px, -20px);
+        }
+        .sample2 img{
+            width: 100%;
+        }
+        .sample3{
+            width: 300px;
+            height: 400px;
+        }
+        .Features-icon{
+            width: 44px;
+            height: 44px;
+        }
+
+        .Features-icon img{
+            width: 100%;
+            margin-top: 5px;
+        }
+        .sub-title{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .content{
+            font-size: 16px;
+        }
+
+        .partner-title h2{
+            font-size: 23px;
+        }
+        .partner-list a{
+            padding:10px;
+            color: black;
+            text-decoration: none;
+        }
+        .partner-list a:hover{
+            padding-bottom: 30px;
+            border-bottom: 5px solid orangered;
+        }
+        .partner-link{
+            width: 100px;
+            height: 80px;
+        }
+
+        
+        .info-box{
+            margin: 50px auto;
+            width: 350px;
+            
+        }
+
+        .box-left{
+            height: 750px;
+        }
+        
+        .box-left h1{
+            color: white;
+            font-size: 29px;
+            line-height: 4rem;
+        }
+
+        .box-left p{
+            color: white;
+            font-style: italic;
+            margin-bottom: 80px;
+        }
+        .quote{
+            width: 48px;
+            height: 37px;
+            margin:20px auto;
+        }
+        .hold-ipad{
+            position: relative;
+            width: 340px;
+            height: 340px;
+        }
+        .hold-ipad img{
+            position: absolute;
+            transform: translateX(-180px);
+            width: 95%;
+           
+        }
+
+        .box-right{
+            height: 900px;
+            padding: 0px;
+        }
+        .freetry-info{
+            margin: 0 auto;
+            width: 100%;
+            height: 900px;
+            background: rgb(248, 246, 246);
+            border-radius: 20px;
+            padding: 40px 20px;
+        }
+        .freetry-info h2{
+            font-size: 24px;
+        }
+        .freetry-info p{
+            font-size: 14px;
+        }
+        .form-top {
+            width: 300px;
+        }
+        .form-top a{
+            color: #ff6e06;
+            text-decoration: none;
+        }
+        form{
+            margin-top: 40px;
+            width: 100%;
+        }
+        label{
+            display: block;
+            font-weight: bold;
+        }
+        input{
+            width: 100%;
+            height: 40px;
+            border: 0.5px solid rgba(206, 204, 204, 0.493);
+        }
+        .group{
+            margin-bottom: 20px;
+        }
+
+        .btn{
+            color: white;
+            width: 200px;
+            height: 60px;
+            background-color: #ff6e06;
+            border: none;
+            border-radius: 30px;
+            transition: .2s;
+            line-height: 50px;
+        }
+        .btn a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn:hover{
+            color: white;
+            background-color: #ff6e06a9;
+        }
+
+        
+        .what-more{
+            height: 100px;
+            background:linear-gradient(#ff6e06a9,#f13e08a9) ;
+            color: white;
+            
+        }
+        .what-more h1{
+            font-size: 20px;
+            line-height: 100px;
+        }
+
+        .contact-us{
+            margin: 20px auto;
+        }
+
+        .contact-us h3{
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .contact-us p{
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-us .icon{
+            width: 48px;
+            height: 48px;
+            margin: 10px;
+        }
+        .contact-us .icon img{
+            width: 100%
+        }
+        
+        .phone{
+            margin-bottom: 20px;
+        }
+
+        .phone a{
+            color: black;
+            font-size: 13px;
+            transition: .2s;
+        }
+        .phone a:hover{
+            color:#ff6e06a9 ;
+            text-decoration: none;
+        }
+
+
+        .dark-blue-bg{
+            background-color: rgb(42, 42, 55);
+        }
+        .footer{
+            color: white;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            font-size: 14px;
+        }
+        
+        .footer-logo{
+            width: 150px;
+            margin: 10px 0px;
+        }
+        .footer-logo img{
+            width: 70%;
+        }
+        .sitmap-wrap p{
+            margin: 0px;
+            margin-top: 30px;
+        }
+        .sitmap-wrap a{
+            color: rgb(255, 255, 255);
+            display: block;
+            padding: 15px 0;
+            border-bottom: .3px solid rgb(77, 75, 75);
+            transition: .2s;
+        }
+
+        .sitmap-wrap a:hover{
+            color: #ff6e06;
+            text-decoration: none;
+        }
+        
+        .ig{
+            margin-top: 40px;
+            width: 230px;
+            padding: 0px;
+        }
+
+        .ig-photo{
+            width: 66px;
+            height: 66px;
+        }
+        .ig-photo img{
+            width: 100%;
+        }
+
+
+        .black-bg{
+            background-color: rgb(28, 27, 29);
+        }
+
+        .footer-bottom{
+            /* height: 80px; */
+            color: rgb(155, 149, 149);
+            padding-top: 15px;
+        }
+
+        .social-media-link{
+            margin-left: 10px
+        }
+        
+        .facebook{
+            margin-top: 40px;
+        }
+        .fb-link-page{
+            width: 100%;
+        }
+
+        .fb-link-page img{
+            width: 100%;
+        }
+
+        
+
+        /* 距離屬性 */
+        .mb40{
+            margin-bottom: 40px;
+        }
+        .white-spacer120{
+            width: 100%;
+            height:30px;  /* 縮小1/4倍 */
+            
+        }
+        /*  */
+        .white-spacer60{
+            width: 100%;
+            height: 30px;
+        }
+        .white-spacer40{
+            width: 100%;
+            height: 20px; 
+        }
+        
+        }
+    </style>
+</head>
+<body>
+    <!-- 上方導覽列 -->
+        <nav class="container-fluid header">
+            <div class="outerbox mx-auto">
+                <div class="nav d-flex justify-content-between align-items-center mx-auto ">
+                    <div class="logo">
+                        <img src="/logo.png" alt="">
+                    </div>
+                    <div class="nav-menu d-none d-md-block">
+                        <a href="">New! 最新消息</a>
+                        <a href="">主要功能</a>
+                        <a href="">客戶推薦</a>
+                        <a href="">預約試用</a>
+                        <a href="">
+                            <i class="fas fa-globe"> 繁體中文</i>
+                        </a>
+                    </div>
+                    <div class="bar d-block d-lg-none">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>      
+        </nav>
+
+    <!-- 大banner     -->
+    <div class="banner d-flex justify-content-center align-items-center">
+        <div class="banner-box text-center">
+            <div class="banner-logo mx-auto">
+                <img src="/logo-white.png" alt="">
+            </div>
+            <h1 class="intro-title text-white m-4">接待，不再手忙腳亂</h1>
+            <p class="intro-content text-white">inline 是一套專供餐廳經營者使用，以雲端作業將訂位流程自動化，提高效率、減低錯誤的雲端管理系統。</p>
+        </div>
+    </div>
+
+    <!-- 小banner -->
+    <div class="container">
+        <div class="row">
+            <div class="small-banner">
+                <img src="/Screen-Shot-2021-07-08-at-2.20.58-PM.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- 服務區域介紹文字 -->
+    <div class="container">
+        <div class="row service-area d-flex justify-content-center">
+            <div class="service-area-info mx-auto text-center mb-3">
+                <h3>inline 的服務範圍已拓展到台灣、香港、日本、馬來西亞、新加坡、泰國、美國及世界其他地區，並支援多國語系操作介面。</h2>
+            </div>
+            <div class="location">
+                <img src="/locations@2x.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid blue-bg d-flex justify-content-center">
+        <div class="container">
+            <div class="tool-info text-center">
+                <span class="d-block">強大的生產力工具</span>
+                <h1>inline三大管理功能，提高訂位效率</h1>
+            </div>
+        </div> 
+    </div>
+    
+    <!-- main section -->
+    <div class="container-fluid blue-bg d-flex">
+        <div class="container">
+            <div class="row">
+                <!-- 手機板時才顯現的block -->
+                <div class="title mb-5 d-flex d-lg-none align-items-center d-none">
+                    <img src="/icon_rsv.png" alt="">
+                    <div>訂位管理</div>
+                </div>
+                <!-- 展示圖1 -->
+                <div class="col-xl-6 col-md-12">
+                    <div class="sample1">
+                        <img src="/rsv@2x.png" alt="">
+                    </div>
+                </div>
+                <!-- 右側內容介紹 -->
+                <div class="col-xl-6 col-md-12">
+                    <div class="d-flex flex-column">
+                        <div class="function">
+                            <div class="title mb-5 d-none d-lg-flex align-items-center juestify-content-start">
+                                <div class="rsv">
+                                    <img src="/icon_rsv.png" alt="">
+                                </div>
+                                <div>訂位管理</div>
+                            </div>
+                            <div class="row mb40 ">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/rsv_01@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class="sub-title">資訊彙整，多重顯示</div>
+                                    <div class="content">隨時都可快速瀏覽每日訂候位列表、桌位圖以及顧客資訊，訂位從各平台串連，皆多重顯示，一覽無遺。</div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/rsv_02@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-10 row">
+                                    <div class="sub-title">⾃動確認訂位</div>
+                                    <div class="content">顧客用餐前，系統再次自動寄送簡訊進行確認，降低人為疏失，訂位管理更有效率。</div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/rsv_03@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-10 row">
+                                    <div class="sub-title">設定開放桌位時段</div>
+                                    <div class="content">提供全客製化桌位配置圖，指定各時段可訂位人數，不怕超接顧客，還可以設定VIP桌，控位一手掌握。</div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/rsv_04@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-10 row ">
+                                    <div class="sub-title">預收訂⾦管理</div>
+                                    <div class="content">inline 提供預收訂金功能，系統也與金流串接，顧客可直接信用卡線上付款；平板上隨時追蹤顧客繳交訂金狀況，帳務更順暢。</div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/rsv_05@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-10 row ">
+                                    <div class="sub-title">雲端運算管理排程</div>
+                                    <div class="content">我們提供了強大的雲端資料庫系統，可即時更新資料，多平台同步運作，精準又安全，管理訂位更方便。</div>
+                                </div>
+                            </div>           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="white-spacer120"></div>
+
+    <!-- 候位管理 -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="title mb-5 d-flex d-lg-none align-items-center d-none">
+                    <img src="/icon_waiting.png" alt="">
+                    <div>候位管理</div>
+                </div>
+                <div class="col-xl-6 col-md-12">
+                    <div class="d-flex flex-column">
+                        <div class="title mb-5 d-none d-lg-flex align-items-center">
+                            <img src="icon_waiting.png" alt="">
+                            <div>候位管理</div>
+                        </div>
+                        <div class="col-xl-6 col-md-12 d-block d-lg-none">
+                            <div class="sample2">
+                                <img src="/waiting@2x.png"alt="">
+                            </div>
+                        </div>
+                        <div class="function">
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/waiting_01@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class="sub-title">多種顧客排隊登記方式</div>
+                                    <div class="content">顧客除了可以使用 iPad 觸控、Kiosk 螢幕登記之外，也可支援 QR code 掃描報到及候位電視牆功能，幫助餐廳疏通排隊人潮。</div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/waiting_02@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class=" sub-title">⾃動安排候位時序</div>
+                                    <div class=" content">候位登記時，系統自動為顧客排號，每組客人都有自己專屬的一組候位序號，排隊報到沒煩惱。</div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/waiting_03@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class="sub-title">顧客不需下載app</div>
+                                    <div class="content">登記候位完立即傳送簡訊連結，顧客完全不需下載多餘的 app ，隨時查看現場候位排號狀況。
+        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/waiting_04@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class="sub-title">一鍵叩客</div>
+                                    <div class="content">輪到該組客人後，餐廳一鍵呼叫顧客回店用餐，省去人工電話確認的時間，為餐廳提供更高的待客效率。</div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/waiting_05@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class="sub-title">支援遠端監控</div>
+                                    <div class="content">即使餐廳人員不在現場，手機只要連上網路，店家即可遠端監控訂候位狀態，安心度爆表。</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-12 d-none d-lg-block">
+                    <div class="sample2">
+                        <img src="/waiting@2x.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    <div class="white-spacer60"></div>
+    <!-- 顧客管理 -->
+    <div class="container-fluid blue-bg d-flex flex-column">
+
+        <div class="white-spacer120"></div>
+
+        <div class="container">
+            <div class="row">
+                <!-- 手機板時才顯現的block -->
+                <div class="title mb-5 d-flex d-lg-none align-items-center d-none">
+                    <img src="/icon_rsv.png" alt="">
+                    <div>顧客管理</div>
+                </div>
+                <!-- 展示圖 -->
+                <div class="col-xl-6 col-md-12">
+                    <div class="sample3">
+                        <img src="/User-profile@2x.png" alt="">
+                    </div>
+                </div>
+                <!-- 右側內容介紹 -->
+                <div class="col-xl-6 col-md-12">
+                    <div class="d-flex flex-column">
+                        <div class="title mb-5 d-none d-lg-flex align-items-center">
+                            <img src="/icon_crm.png" alt="">
+                            <div>顧客管理</div>
+                        </div>
+                        <div class="function">
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/crm_01@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class="sub-title">顧客資料庫</div>
+                                    <div class="content">餐廳可隨時調閱顧客跨餐廳、跨分店消費記錄，每筆訂候位都會存入後台，建立餐飲業龐大資料庫。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/crm_02@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class="sub-title">記錄顧客喜好</div>
+                                    <div class="content">這位客人不吃辣？這位客人喜歡坐室外？inline 全部幫你記錄起來，餐廳可自訂客人喜好，往後對回頭客的新進訂候位就可以貼心應對！
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb40">
+                                <div class="col-lg-2 col-3">
+                                    <div class="Features-icon mr-auto">
+                                        <img src="/crm_03@2x.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row col-10">
+                                    <div class="sub-title">統計數據管理</div>
+                                    <div class="content">針對不同顧客，inline 提供輔助行銷、數據收集、統計報表等顧客關係管理工具，增加餐廳好感度，有效提高顧客回頭率。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="white-spacer60"></div>
+
+    <!-- 合作夥伴 -->
+    <div class="container text-center partner-title">
+        <h2>正在使用inline的合作夥伴...</h1>
+    </div>
+
+    <div class="white-spacer40"></div>
+
+    <div class="container text-center">
+        <div class="partner-list">
+            <a href="" class="d-block d-lg-inline">連鎖餐飲集團</a>
+            <a href="" class="d-block d-lg-inline">五星級飯店</a>
+            <a href="" class="d-block d-lg-inline">百貨賣場</a>
+            <a href="" class="d-block d-lg-inline">米其林星級</a>
+            <a href="" class="d-block d-lg-inline">特色名店</a>
+            <a href="" class="d-block d-lg-inline">海外</a>
+        </div class="partner-list">
+    </div>
+    <div class="white-spacer40"></div>
+
+    <!-- 合作夥伴名單 -->
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo01@2x-4.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo02@2x-4.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo03@2x-5.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo04@2x-5.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo08@2x-3.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo09@2x-2.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo10@2x-2.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo11@2x-2.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo12@2x.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo14@2x.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo15-copy@2x.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 ">
+                <div class="partner-link ">
+                    <a href="">
+                        <img src="/連鎖餐飲集團logo/logo15@2x-2.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="white-spacer60"></div>
+
+    <!-- freetry-form -->
+    <div class="container-fluid  deep-blue-bg p-1">
+        <div class="info-box container">
+            <div class="row">
+                <div class="box-left col-12 col-lg-6 text-center text-center">
+                        <div class="quote">
+                            <img src="/quote1.png" alt="">
+                        </div>
+                        <h1>
+                            inline 是目前世界上最好用的訂候位控管、帶位工具及顧客管理系統
+                        </h1>
+                        <p>
+                            許禮麟, 金田餐飲集團總經理
+                        </p>
+                        <div class="hold-ipad mx-auto">
+                            <img src="/hold_ipad.png" alt="">
+                        </div>
+                </div>
+                <div class="box-right col-12 col-lg-6">
+                        <div class="freetry-info">
+                            <div class="form-top text-center mx-auto">
+                                <h2>免費專人到店體驗！</h2>
+                                <p>疫情後享受訂位管理系統 2 週免費用 + 專人教學
+                                    請留下聯絡資訊，我們將安排業務介紹產品
+                                    消費者請進入 <span><a href="#">inline 美食地圖</a></span> 向餐廳訂餐</p>
+                            </div>
+                            <form action="" >
+                                <div class="group">
+                                    <label for="" >聯絡人姓名 (必填)</label>
+                                    <input type="text" placeholder="例：王小名" >
+                                </div>
+                                <div class="group">
+                                    <label for="">手機號碼 (必填)</label>
+                                    <input type="text" placeholder="例：0912XXXXXXX">
+                                </div>
+                                <div class="group">
+                                    <label for="">電子信箱 (必填)</label>
+                                    <input type="text" placeholder="例：welcome@inline.com">
+                                </div>
+                                <div class="group">
+                                    <label for="">您的餐廳名稱 (必填)</label>
+                                    <input type="text" placeholder="例：來來餐館">
+                                </div>
+                                <div class="group">
+                                    <label for="">餐廳所在地址 (必填)</label>
+                                    <input type="text" placeholder="例：台北市">
+                                </div>
+                                <div class="group">
+                                    <label for="">您對 inline 的哪個功能有興趣？（必填）</label>
+                                    <input type="text">
+                                </div>
+                                <div class="google-recapcha"></div>                
+                            </form>
+                            <div class="btn mx-auto d-block">送出
+                                <a href=""></a>
+                            </div>
+                        </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- 中間小banner -->
+    <div class="container-fluid what-more">
+        <a href="#">
+            <div class="row p-0 justify-content-center align-items-center col-md-12 mx-auto">
+                <h1>inline 還有什麼強大之處，點擊了解更多 </h1>
+            </div>
+        </a>
+    </div>
+
+    <!-- contact us -->
+    <div class="container-fluid ">
+        <div class="row container contact-us mx-auto">
+            <div class="col-lg-6 col-md-12 ">
+                <div class="phone text-center">
+                    <div class="icon mx-auto">
+                        <img src="/bottom_phonenumber@2x.png" alt="">
+                    </div>
+                    <h3>直接電話聯繫我們</h3>
+                    <p>電話克服時間：星期一~星期五 10:00~19:00</p>
+                    <a href="">02-2322-3414</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 ">
+                <div class="mail text-center">
+                    <div class="icon mx-auto">
+                        <img src="/bottom_email@2x.png" alt="">
+                    </div>
+                    <h3>立即免費試用 inline</h3>
+                    <p>免費前兩週試用期，歡迎填寫表單聯絡我們，我們會有專人盡快回覆您！</p>
+                    <div class="btn">立即免費試用
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  footer -->
+    <div class="container-fluid dark-blue-bg">
+        <div class="row container footer mx-auto">
+            <div class="col-lg-3 col-md-12">
+                <div class="footer-logo">
+                    <img src="/logo.png" alt="">
+                </div>
+                <p>inline Ltd.</p>
+                <p>樂排股份有限公司</p>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <div class="sitmap-wrap">
+                    <p>inline Sitemap</p>
+                    <a href="">文章專欄</a>
+                    <a href="">News!最新消息</a>
+                    <a href="">首頁</a>
+                    <a href="">為何使用 inline</a>
+                    <a href="">訂位管理</a>
+                    <a href="">顧客管理CRM</a>
+                    <a href="">線上外帶/外送服務</a>
+                    <a href="">防疫新生活</a>
+                    <a href="">客戶推薦</a>
+                    <a href="">立即試用</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <div class="ig">
+                    <p>Instagram</p>
+                    <div class="row">
+                        <div class="col-4 mb-3">
+                            <div class="ig-photo">
+                                <img src="/ig首圖/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 mb-3">
+                            <div class="ig-photo">
+                                <img src="/ig首圖/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 mb-3">
+                            <div class="ig-photo">
+                                <img src="/ig首圖/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 mb-3">
+                            <div class="ig-photo">
+                                <img src="/ig首圖/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 mb-3">
+                            <div class="ig-photo">
+                                <img src="/ig首圖/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 mb-3">
+                            <div class="ig-photo">
+                                <img src="/ig首圖/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 mb-3">
+                            <div class="ig-photo">
+                                <img src="/ig首圖/1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <div class="facebook">
+                    <p>Facebook Page</p>
+                    <div class="fb-link-page">
+                        <img src="/fb-screenshot.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid black-bg ">
+        <div class="container  footer-bottom ">
+            <div class="row justify-content-between text-center">
+                <div class="col-lg-6 col-12 footer-left">
+                    <p>© 2021 inline Ltd. All rights reserved. <a href="">Terms of service</a>  ｜ <a href="">Privacy policy</a></p>
+                </div>
+                <div class="d-flex col-lg-6 col-12 justify-content-lg-end justify-content-center">
+                    <div class="social-media-link">  
+                        <a href="#"><i class="fab fa-facebook-f"></i></a href="#">
+                    </div>
+                    <div class="social-media-link">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="social-media-link">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="social-media-link">
+                        <a href="#"><i class="fab fa-medium-m"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener("scroll",function(){
+            const navbar = document.querySelector(".header");
+            navbar.classList.toggle('sticky', window.scrollY > 0)
+        });
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
