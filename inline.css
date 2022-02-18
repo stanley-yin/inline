@@ -151,6 +151,7 @@ ul {
 .title {
   font-size: 30px;
   padding-top: 10px;
+  margin-bottom: 3rem;
 }
 
 .title img {
@@ -171,7 +172,6 @@ ul {
 
 .sample3 {
   max-width: 560px;
-  height: 698px;
 }
 .sample3 img {
   width: 100%;
@@ -230,11 +230,8 @@ ul {
   margin: 50px auto;
 }
 
-.box-left {
-  height: 1000px;
-}
-.box-right {
-  height: 1000px;
+.box-left,.box-right{
+    padding: 20px  15px;
 }
 .box-left h1 {
   color: white;
@@ -252,16 +249,14 @@ ul {
   margin: 30px 0;
 }
 .hold-ipad {
-  width: 560px;
-  height: 560px;
+  width: 90%;
 }
 .hold-ipad img {
   width: 100%;
 }
 .freetry-info {
   margin: auto;
-  width: 500px;
-  height: 1000px;
+  width: 100%;
   background: rgb(248, 246, 246);
   border-radius: 20px;
   padding: 40px;
@@ -294,6 +289,7 @@ input {
   color: white;
   width: 200px;
   height: 60px;
+  font-weight: bolder;
   background-color: #ff6e06;
   border: none;
   border-radius: 30px;
@@ -307,8 +303,10 @@ input {
 
 .what-more {
   height: 200px;
-  background: linear-gradient(#ff6e06a9, #f13e08a9);
+  width: 100%;
+  background: linear-gradient(#ff6e06e5, #ee3d07d5);
   color: white;
+  text-align: center;
 }
 .what-more h1 {
   line-height: 200px;
@@ -321,18 +319,41 @@ input {
   text-decoration: none;
   color: white;
 }
+
+
+.fa-arrow-right{
+    font-weight: 900;
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 15px;
+    transition: .3s;
+    /* visibility: hidden; */
+    margin-left: -30px;
+    opacity: 0;
+
+}
+
+.fa-arrow-right.show{
+    /* display: inline-block; */
+    /* visibility: visible; */
+    margin-left: 10px;
+    opacity: 1;
+  margin-bottom: 50px;
+
+}
 .contact-us {
   margin: 20px auto;
 }
 
-.phone-icon {
+.icon {
   width: 48px;
   height: 48px;
   margin: 20px;
 }
-.phone-icon img {
+.icon img {
   width: 100%;
 }
+
 
 .phone a {
   color: black;
@@ -342,15 +363,6 @@ input {
 .phone a:hover {
   color: #ff6e06a9;
   text-decoration: none;
-}
-
-.mail-icon {
-  width: 48px;
-  height: 48px;
-  margin: 20px;
-}
-.mail-icon img {
-  width: 100%;
 }
 
 .dark-blue-bg {
@@ -433,9 +445,9 @@ input {
 .mb40 {
   margin-bottom: 40px;
 }
-.white-spacer120 {
+.white-spacer100 {
   width: 100%;
-  height: 120px;
+  height: 100px;
 }
 .white-spacer60 {
   width: 100%;
@@ -513,6 +525,15 @@ input {
   .header.sticky a:hover {
     color: orange;
   }
+
+  /* .hold-ipad {
+    position: relative;
+    width: 100%;
+    height: 340px;
+  } */
+
+
+
 }
 
 /* --------------手機以iphone8 plus的414為寬度------------------- */
@@ -738,10 +759,7 @@ input {
     height: 80px;
   }
 
-  .info-box {
-    /* margin: 50px auto;
-    width: 350px; */
-  }
+ 
 
   .box-left {
     height: 750px;
@@ -781,7 +799,7 @@ input {
   .freetry-info {
     margin: 0 auto;
     width: 100%;
-    height: 900px;
+    height: auto;
     background: rgb(248, 246, 246);
     border-radius: 20px;
     padding: 40px 20px;
