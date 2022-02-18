@@ -56,9 +56,14 @@ ul {
   text-decoration: none;
   transition: 0.2s;
 }
+.nav-menu a{
+    transition: .2s;
+
+}
 
 .nav-menu a:hover {
-  color: white;
+  color: #ff6e06;
+  text-decoration: none;
 }
 .bar {
   /* width: 10%; */
